@@ -1,13 +1,7 @@
 <<<<<<< HEAD
 # 🎉 Fun Questions & Gift App - Complete Setup
 
-## ✅ What's Working Now
-
-Your app is **running locally** at:
-- **Main App**: http://localhost:3000
-- **Admin Panel**: http://localhost:3000/admin (Password: `admin123`)
-
-An interactive, colorful website that asks 10 personal/funny questions and stores ALL data in a database that you can view in the admin panel!
+## ✅An interactive, colorful website that asks 10 personal/funny questions and stores ALL data in a database that you can view in the admin panel!
 
 ## Features ✨
 
