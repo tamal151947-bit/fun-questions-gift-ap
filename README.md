@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🎉 Fun Questions & Gift App - Complete Setup
 
 ## ✅ What's Working Now
@@ -191,3 +192,7 @@ For any issues or questions, feel free to reach out!
 ---
 
 **Enjoy the fun and get your surprise gift! 🎁🎉**
+=======
+# fun-questions-gift-ap
+Fun questions app with surprise gift form
+>>>>>>> 85ee06d274312859aeff0b01cae4eb477e30cc2d
