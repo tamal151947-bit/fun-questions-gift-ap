@@ -1,0 +1,351 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    position: relative;
+}
+
+.screen {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 30px;
+    padding: 40px 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    display: none;
+    animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.screen.active {
+    display: block;
+}
+
+/* Welcome Screen */
+.emoji-rain {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.title {
+    font-size: 2.5em;
+    color: #667eea;
+    text-align: center;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #555;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+.btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1em;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-start {
+    display: block;
+    margin: 0 auto;
+    font-size: 1.3em;
+}
+
+/* Progress Bar */
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background: #e0e0e0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    width: 10%;
+    transition: width 0.5s ease;
+    border-radius: 10px;
+}
+
+.question-counter {
+    text-align: center;
+    font-size: 1.1em;
+    color: #667eea;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Question Container */
+#question-container {
+    margin-bottom: 30px;
+}
+
+.question {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Input Styles */
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 1em;
+    border: 3px solid #667eea;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #764ba2;
+    box-shadow: 0 0 15px rgba(102, 126, 234, 0.3);
+}
+
+/* Image Upload */
+.image-upload-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.camera-btn,
+.upload-btn {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1em;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.camera-btn:hover,
+.upload-btn:hover {
+    transform: scale(1.05);
+}
+
+.image-preview {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 15px;
+    margin-top: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+input[type="file"] {
+    display: none;
+}
+
+/* Playful Messages */
+.playful-message {
+    text-align: center;
+    font-size: 1.3em;
+    color: #f5576c;
+    font-weight: bold;
+    margin: 20px 0;
+    min-height: 40px;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Button Group */
+.button-group {
+    text-align: center;
+}
+
+.btn-next {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+/* Gift Form */
+.form-title {
+    font-size: 2em;
+    color: #667eea;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.form-subtitle {
+    font-size: 1.1em;
+    color: #555;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.btn-submit {
+    width: 100%;
+    background: linear-gradient(135deg, #f5576c 0%, #f093fb 100%);
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Thank You Screen */
+.confetti {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+    animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.thankyou-title {
+    font-size: 3em;
+    color: #f5576c;
+    text-align: center;
+    margin-bottom: 20px;
+    animation: pulse 1.5s ease infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.thankyou-message {
+    font-size: 1.5em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.thankyou-submessage {
+    font-size: 1.2em;
+    color: #555;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.celebration-emoji {
+    font-size: 60px;
+    text-align: center;
+    animation: bounce 2s infinite;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2em;
+    }
+
+    .question {
+        font-size: 1.2em;
+    }
+
+    .btn {
+        padding: 12px 30px;
+        font-size: 1em;
+    }
+
+    .screen {
+        padding: 30px 20px;
+    }
+
+    .thankyou-title {
+        font-size: 2em;
+    }
+
+    .celebration-emoji {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.5em;
+    }
+
+    .emoji-rain,
+    .confetti {
+        font-size: 30px;
+    }
+
+    .question {
+        font-size: 1.1em;
+    }
+}
